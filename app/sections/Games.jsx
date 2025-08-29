@@ -108,11 +108,11 @@ export default function GamesPage() {
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl shadow-black/30 transition-transform hover:scale-[1.02]"
               >
-                <div className="relative aspect-[4/3]">
+<div className="relative h-64 overflow-hidden">  {/* ~256px tall */}
                   <img
                     src={g.img}
                     alt={g.title}
-                    className="h-[40] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute left-3 top-3 rounded-full bg-yellow-400/90 px-2.5 py-1 text-xs font-bold text-black ring-1 ring-black/10">
@@ -149,8 +149,7 @@ export default function GamesPage() {
       {/* Footer */}
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-white/70">
-          © {new Date().getFullYear()} Mahaveera. Entertainment only. Play
-          responsibly.
+          © {new Date().getFullYear()} Mahaveera. Entertainment only. Play responsibly.
         </div>
       </footer>
     </main>
