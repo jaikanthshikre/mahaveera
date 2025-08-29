@@ -151,12 +151,8 @@ export default function ReviewsSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mx-auto mt-10 max-w-3xl text-center">
-          <button className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-6 py-3 font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
-            Write a Review
-          </button>
-        </div>
+      
+        
       </div>
     </section>
   );

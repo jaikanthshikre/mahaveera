@@ -5,6 +5,7 @@ import {
   Shield, TrendingUp, Clock, Headphones, Smartphone,
   Gift, Zap, BadgeCheck, CheckCircle2, XCircle, ArrowRight
 } from 'lucide-react';
+import Link from 'next/link';
 
 const FEATURES = [
   { title: 'Secure & Transparent', desc: 'Bank-grade encryption, clear rules, verified results.', Icon: Shield },
@@ -18,12 +19,12 @@ const FEATURES = [
 ];
 
 const MATRIX = [
-  { label: 'Encryption & KYC',            mmb: true,  other: false },
-  { label: 'Fast Payout Windows',         mmb: true,  other: false },
-  { label: 'Live Odds Coverage',          mmb: true,  other: true  },
-  { label: 'Responsible Play Tools',      mmb: true,  other: false },
-  { label: '24/7 Human Support',          mmb: true,  other: false },
-  { label: 'Transparent Promo Terms',     mmb: true,  other: false },
+  { label: 'Encryption & KYC',            Mahaveera: true,  other: false },
+  { label: 'Fast Payout Windows',         Mahaveera: true,  other: false },
+  { label: 'Live Odds Coverage',          Mahaveera: true,  other: true  },
+  { label: 'Responsible Play Tools',      Mahaveera: true,  other: false },
+  { label: '24/7 Human Support',          Mahaveera: true,  other: false },
+  { label: 'Transparent Promo Terms',     Mahaveera: true,  other: false },
 ];
 
 export default function WhyChooseUsAltSection() {
@@ -88,7 +89,7 @@ export default function WhyChooseUsAltSection() {
           ))}
         </ol>
 
-        {/* How We Stack Up — split design (MMB left, Others right) */}
+        {/* How We Stack Up — split design (Mahaveera left, Others right) */}
         <div className="mx-auto mt-14 max-w-5xl">
           <div className="mb-4 text-center md:text-left">
             <h3 className="text-2xl font-bold">
@@ -96,15 +97,15 @@ export default function WhyChooseUsAltSection() {
                 How We Stack Up
               </span>
             </h3>
-            <p className="mt-1 text-sm text-white/70">Left: MMB. Right: Others. Same features, different reality.</p>
+            <p className="mt-1 text-sm text-white/70">Left: Mahaveera. Right: Others. Same features, different reality.</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {/* MMB column */}
+            {/* Mahaveera column */}
             <section className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
               <header className="flex items-center justify-between border-b border-white/10 px-5 py-3">
                 <h4 className="text-lg font-semibold">
-                  <span className="bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">MMB</span>
+                  <span className="bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">Mahaveera</span>
                 </h4>
                 <span className="rounded-full bg-gradient-to-r from-yellow-500 to-amber-400 px-3 py-1 text-xs font-bold text-black">
                   Verified
@@ -114,7 +115,7 @@ export default function WhyChooseUsAltSection() {
                 {MATRIX.map((row, idx) => (
                   <li key={row.label} className="flex items-center justify-between px-5 py-3">
                     <span className="text-sm text-white/85">{row.label}</span>
-                    {row.mmb ? (
+                    {row.Mahaveera ? (
                       <span className="inline-flex items-center gap-1 text-emerald-300">
                         <CheckCircle2 className="h-4 w-4" /> Yes
                       </span>
@@ -158,10 +159,10 @@ export default function WhyChooseUsAltSection() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+         <Link href="https://wa.link/iwantmahaveeraid"> <button className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
             Get Started
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </button>
+          </button></Link>
           <p className="mt-3 text-xs text-white/70">Play responsibly. Set limits and take breaks.</p>
         </div>
       </div>

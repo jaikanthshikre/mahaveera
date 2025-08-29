@@ -1,17 +1,18 @@
+'use client'
 
-   'use client'
-   
-import { ArrowRight } from 'lucide-react'
+import Image from "next/image"
 
 export default function HomePage() {
   return (
-    
     <div>
-    <img src="/mahaveera.png" alt="" className='md:h-[85vh] w-full' />
-   </div>
-
-     
+      <Image
+        src="/mahaveera.webp"
+        alt="Mahaveera"
+        width={1920}   
+        height={1080}  
+        className="md:h-[85vh] w-full object-cover"
+        priority 
+      />
+    </div>
   )
 }
-
-

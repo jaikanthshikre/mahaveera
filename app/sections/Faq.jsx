@@ -6,7 +6,7 @@ import { HelpCircle, ChevronDown, Shield, MessageCircle } from 'lucide-react';
 
 const faqs = [
   {
-    q: 'Is MMB Bet Book secure for deposits and withdrawals?',
+    q: 'Is Mahaveera Bet Book secure for deposits and withdrawals?',
     a: 'Yes. Payments are encrypted end-to-end and processed via trusted gateways. You can also enable limits and cool-offs for responsible play.',
     icon: Shield,
   },

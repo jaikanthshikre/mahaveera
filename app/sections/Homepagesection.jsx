@@ -6,6 +6,7 @@ import {
   Users, Award, ChevronRight, Dice1, Dice6,
   Shield, Phone, ArrowRight
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomepageSection() {
   const [activeTab, setActiveTab] = useState('sports');
@@ -60,20 +61,20 @@ export default function HomepageSection() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button
+            <Link href="https://wa.link/iwantmahaveeraid">  <button
                 className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300"
               >
                 <Crown className="h-5 w-5" />
                 Start Playing Now
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-0" />
-              </button>
+              </button></Link>
 
-              <button
+               <Link href="https://wa.link/iwantmahaveeraid"> <button
                 className="group relative inline-flex items-center gap-2 rounded-xl border-2 border-yellow-400/80 px-8 py-4 text-lg font-bold text-yellow-200 transition hover:bg-yellow-500 hover:text-black hover:shadow-[0_10px_30px_rgba(234,179,8,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300"
               >
                 <img aria-hidden alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" className="hidden" />
-                Claim ₹50,000 Bonus
-              </button>
+                Claim ₹5000 Bonus
+              </button></Link>
             </div>
           </header>
 
@@ -218,10 +219,10 @@ export default function HomepageSection() {
                     </div>
                   </div>
 
-                  <button className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-2 font-semibold text-white shadow hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300">
+                 <Link href="https://lineguru777.com/"> <button className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-2 font-semibold text-white shadow hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300">
                     <Play className="h-4 w-4" />
                     Play Now
-                  </button>
+                  </button></Link>
 
                   <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-yellow-300/0 transition group-hover:ring-4 group-hover:ring-yellow-300/20" />
                 </div>
@@ -240,13 +241,13 @@ export default function HomepageSection() {
                 <Dice1 className="h-16 w-16 text-yellow-300" />
                 <Dice6 className="h-16 w-16 text-rose-400" />
               </div>
-              <h3 className="text-3xl font-bold text-yellow-300">Coming Soon</h3>
+              
               <p className="mx-auto mt-3 max-w-xl text-lg text-white/75">
                 A curated collection of cinematic slot games with fair RTP and slick motion.
               </p>
-              <button className="mt-7 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-6 py-3 font-bold text-black shadow hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
-                Notify Me
-              </button>
+             <Link href="https://lineguru777.com/"> <button className="mt-7 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-6 py-3 font-bold text-black shadow hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+                Click Here
+              </button></Link>
             </div>
           </section>
 
@@ -262,10 +263,10 @@ export default function HomepageSection() {
                 Join thousands who trust MahaveeraBook for a polished, secure, fast gaming experience.
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <button className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+              <Link href="https://wa.link/iwantmahaveeraid"><button className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_rgba(234,179,8,0.35)] transition-transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
                   Register Now
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </button>
+                </button></Link>
                 <div className="inline-flex items-center gap-2 text-yellow-300">
                   <Phone className="h-4 w-4" />
                   <span className="text-sm">24/7 Support: +91 98765 43210</span>
@@ -277,7 +278,7 @@ export default function HomepageSection() {
           {/* Footer */}
           <footer className="mt-12 border-t border-white/10">
             <div className="py-8 text-center text-sm text-white/70">
-              © {new Date().getFullYear()} MMB. Entertainment only. Play responsibly.
+              © {new Date().getFullYear()} Mahaveera. Entertainment only. Play responsibly.
             </div>
           </footer>
         </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // app/football/page.jsx
 export const metadata = {
   title: "Football Betting in India | Mahaveera",
@@ -126,12 +128,12 @@ export default function FootballMahaveeraPage() {
           </p>
 
           <div className="mt-8">
-            <a
-              href="/signup"
+              <Link
+              href="https://wa.link/iwantmahaveeraid"
               className="inline-flex items-center rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-neutral-900"
             >
               Create Your Betting ID
-            </a>
+            </Link>
           </div>
         </section>
       </div>
