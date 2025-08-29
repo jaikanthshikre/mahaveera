@@ -51,9 +51,9 @@ export default function WhyChooseUsAltSection() {
         </header>
 
         {/* Trust badges */}
-        <div className="mx-auto mb-10 flex max-w-4xl snap-x snap-mandatory gap-3 overflow-x-auto pb-2">
+        <div className="mx-auto mb-10 flex max-w-4xl snap-x snap-mandatory gap-3 overflow-x-auto pb-2 ">
           {['ISO-grade Security','24/7 Human Support','Fast Payouts','Transparent Promos','Responsible Play Tools'].map((t) => (
-            <span key={t} className="snap-start inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm backdrop-blur-sm">
+            <span key={t} className="snap-start inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-2 text-sm backdrop-blur-sm">
               <span className="size-2 rounded-full bg-gradient-to-r from-yellow-400 to-red-500" />
               {t}
             </span>

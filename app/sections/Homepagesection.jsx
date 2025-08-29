@@ -46,7 +46,7 @@ export default function HomepageSection() {
         <div className="mx-auto max-w-7xl">
           {/* Hero */}
           <header className="text-center mb-14 md:mb-16">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+            <h1 className="text-2xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
               <span className="bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-400 bg-clip-text text-transparent">
                 INDIA&apos;S #1
               </span>
@@ -88,17 +88,17 @@ export default function HomepageSection() {
             ].map(({ icon: Icon, label, value, color }, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-shadow hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
+                className="group relative rounded-2xl border border-white/10 bg-white/5 p-2 md:p-6 backdrop-blur-sm transition-shadow hover:shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
               >
                 <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity group-hover:opacity-100"
                      style={{ background: 'linear-gradient(135deg, rgba(250,204,21,0.08), rgba(239,68,68,0.08))' }} />
-                <div className="relative z-10 flex items-center gap-4">
-                  <div className={`rounded-xl bg-black/40 p-3 ${color}`}>
-                    <Icon className="h-6 w-6" />
+                <div className="relative z-10 flex items-center gap-2 md:gap-4">
+                  <div className={`rounded-xl bg-black/40 p-2 ${color}`}>
+                    <Icon className="h-3 md:h-6 w-3 md:w-6" />
                   </div>
                   <div>
-                    <div className="text-2xl font-extrabold text-white tracking-tight">{value}</div>
-                    <div className="text-sm text-white/70">{label}</div>
+                    <div className="text-lg md:text-2xl font-extrabold text-white tracking-tight">{value}</div>
+                    <div className="text-xs md:text-sm text-white/70">{label}</div>
                   </div>
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function HomepageSection() {
           {/* Bottom CTA */}
           <section className="mt-16 text-center">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-bold">
+              <h3 className="text-xl md:text-3xl font-bold">
                 <span className="bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">
                   Ready to Win Big?
                 </span>
@@ -267,10 +267,7 @@ export default function HomepageSection() {
                   Register Now
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button></Link>
-                <div className="inline-flex items-center gap-2 text-yellow-300">
-                  <Phone className="h-4 w-4" />
-                  <span className="text-sm">24/7 Support: +91 98765 43210</span>
-                </div>
+                
               </div>
             </div>
           </section>
