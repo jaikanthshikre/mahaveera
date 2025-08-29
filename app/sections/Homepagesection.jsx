@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {
   Trophy, Star, Zap, Crown, Play, TrendingUp,
   Users, Award, ChevronRight, Dice1, Dice6,
-  Shield, Phone, ArrowRight
+  Shield,  ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -20,10 +20,10 @@ export default function HomepageSection() {
   ];
 
   const casinoData = [
-    { name: 'Lightning Roulette', players: '1,245', jackpot: '₹2,50,000', icon: '🎰' },
-    { name: 'Blackjack Royal',    players: '856',  jackpot: '₹1,80,000', icon: '🃏' },
-    { name: 'Dragon Tiger',       players: '642',  jackpot: '₹95,000',   icon: '🐉' },
-    { name: 'Teen Patti Gold',    players: '1,892',jackpot: '₹3,25,000', icon: '♠️' },
+    { name: 'Teen Patti', players: '1,245', jackpot: '₹2,50,000', icon: '🎰' },
+    { name: 'Dragon Tiger',    players: '856',  jackpot: '₹1,80,000', icon: '🃏' },
+    { name: 'Lucky7',       players: '642',  jackpot: '₹95,000',   icon: '🐉' },
+    { name: 'Cricket',    players: '1,892',jackpot: '₹3,25,000', icon: '♠️' },
   ];
 
   const tabs = [
@@ -207,16 +207,22 @@ export default function HomepageSection() {
                 >
                   <div className="mb-4 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl leading-none">{game.icon}</span>
+                      <span className="text-lg md:text-2xl leading-none">{game.icon}</span>
                       <div>
-                        <h3 className="text-xl font-bold text-white">{game.name}</h3>
-                        <p className="text-sm text-white/70">{game.players} players online</p>
+                        <h3 className="text-lg md:text-xl font-bold text-white py-2">{game.name}</h3>
+                        <p className="text-xs md:text-sm text-white/70">{game.players} players online</p>
+                        <div className="md:hidden block mt-2">
+                      <div className="text-xs text-white/60">Jackpot</div>
+                      <div className="text-lg  font-extrabold text-yellow-300">{game.jackpot}</div>
+                    </div>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="hidden md:block text-right">
                       <div className="text-xs text-white/60">Jackpot</div>
-                      <div className="text-xl font-extrabold text-yellow-300">{game.jackpot}</div>
+                      <div className="text-lg md:text-xl font-extrabold text-yellow-300">{game.jackpot}</div>
                     </div>
+                  
+
                   </div>
 
                  <Link href="https://lineguru777.com/"> <button className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-2 font-semibold text-white shadow hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300">
