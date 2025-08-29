@@ -108,7 +108,7 @@ export default function GamesPage() {
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl shadow-black/30 transition-transform hover:scale-[1.02]"
               >
-<div className="relative h-64 overflow-hidden">  {/* ~256px tall */}
+<div className="relative h-78 md:h-64 overflow-hidden">  {/* ~256px tall */}
                   <img
                     src={g.img}
                     alt={g.title}

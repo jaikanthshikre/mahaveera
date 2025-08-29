@@ -1,3 +1,4 @@
+// app/components/Navbar.jsx
 'use client'
 
 import { Menu, X, Phone, Globe, Star, Zap, Trophy, Volleyball, Club, Bomb } from 'lucide-react'
@@ -12,7 +13,6 @@ export default function Navbar() {
     { name: 'Casino', icon: Club, href: '/casino' },
     { name: 'Tennis', icon: Bomb, href: '/tennis' },
     { name: 'FootBall', icon: Volleyball, href: '/football' },
-    
   ]
 
   return (
@@ -49,12 +49,12 @@ export default function Navbar() {
         {/* Logo */}
         <div className="group cursor-pointer">
           <div className="flex items-center gap-2">
-         
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400 bg-clip-text tracking-wide drop-shadow-2xl group-hover:scale-105 transition-transform duration-300">
-    <Link href="/"> <img src="logo.png" alt="" className='h-15 w-full'/></Link>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                <img src="logo.png" alt="Mahaveera" className="h-15 w-full" />
+              </Link>
             </div>
           </div>
-        
         </div>
 
         {/* Desktop Menu */}
@@ -98,8 +98,10 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((v) => !v)}
             className="p-2 rounded-lg hover:bg-white/10 transition-all duration-300"
+            aria-expanded={menuOpen}
+            aria-label="Toggle menu"
           >
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -115,6 +117,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-3 text-sm text-gray-300 hover:text-yellow-400 cursor-pointer p-3 rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 <IconComponent className="w-4 h-4" />
@@ -122,13 +125,13 @@ export default function Navbar() {
               </Link>
             )
           })}
-          <div className="flex gap-3 mt-6 pt-4 border-t border-yellow-700/30">
-            <Link href="https://wa.link/iwantmahaveeraid">
+          <div className="flex gap-3 mt-6 pt-4 border-top border-yellow-700/30">
+            <Link href="https://wa.link/iwantmahaveeraid" onClick={() => setMenuOpen(false)}>
               <button className="px-4 py-3 border-2 border-yellow-500 text-yellow-300 rounded-lg hover:bg-yellow-500 hover:text-black transition-all duration-300 font-semibold">
                 Login
               </button>
             </Link>
-            <Link href="https://wa.link/iwantmahaveeraid">
+            <Link href="https://wa.link/iwantmahaveeraid" onClick={() => setMenuOpen(false)}>
               <button className="px-4 py-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black rounded-lg font-bold hover:from-yellow-400 hover:to-yellow-300 transition-all duration-300 flex items-center justify-center gap-2">
                 <Star className="w-4 h-4" />
                 Register
@@ -138,45 +141,53 @@ export default function Navbar() {
         </div>
       )}
 
-
       {/* Marquee Section */}
-<div className="relative bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 shadow-inner overflow-hidden">
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-  <div className="relative z-10 py-2 px-4 flex items-center gap-2 text-red-600 font-bold text-sm">
-    <Trophy className="w-4 h-4 animate-bounce" />
-    <div className="overflow-hidden whitespace-nowrap flex-1">
-      <div className="flex animate-scroll">
-        <span className="mx-4">
-          🎰 Best Gaming Site in India • 🏆 Welcome Bonus Up to ₹5000 • 🎲 Live Casino Available 24/7 • 🏏 Sports Betting with Best Odds • 🎁 Daily Promotions & Rewards •
-        </span>
-        <span className="mx-4">
-          🎰 Best Gaming Site in India • 🏆 Welcome Bonus Up to ₹5000 • 🎲 Live Casino Available 24/7 • 🏏 Sports Betting with Best Odds • 🎁 Daily Promotions & Rewards •
-        </span>
+      <div className="relative bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 shadow-inner overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+        <div className="relative z-10 py-2 px-4 flex items-center gap-2 text-red-600 font-bold text-sm">
+          <Trophy className="w-4 h-4 animate-bounce" />
+          <div className="overflow-hidden whitespace-nowrap flex-1">
+            <div className="flex animate-scroll">
+              <span className="mx-4">
+                🎰 Best Gaming Site in India • 🏆 Welcome Bonus Up to ₹5000 • 🎲 Live Casino
+                Available 24/7 • 🏏 Sports Betting with Best Odds • 🎁 Daily Promotions & Rewards •
+              </span>
+              <span className="mx-4">
+                🎰 Best Gaming Site in India • 🏆 Welcome Bonus Up to ₹5000 • 🎲 Live Casino
+                Available 24/7 • 🏏 Sports Betting with Best Odds • 🎁 Daily Promotions & Rewards •
+              </span>
+            </div>
+          </div>
+          <Zap className="w-4 h-4 animate-pulse text-red-500" />
+        </div>
       </div>
-    </div>
-    <Zap className="w-4 h-4 animate-pulse text-red-500" />
-  </div>
-</div>
 
-<style jsx>{`
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-  .animate-scroll {
-    display: flex;
-    width: max-content;
-    animation: scroll 30s linear infinite;
-  }
-  .animate-shimmer {
-    animation: shimmer 2s ease-in-out infinite;
-  }
-`}</style>
-
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+        .animate-scroll {
+          display: flex;
+          width: max-content;
+          animation: scroll 30s linear infinite;
+        }
+        .animate-shimmer {
+          animation: shimmer 2s ease-in-out infinite;
+        }
+      `}</style>
     </header>
   )
 }
